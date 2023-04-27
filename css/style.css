@@ -1,0 +1,295 @@
+/*Configurações padrão*/
+:root{
+    --color-header:#fffcf2;
+    --color-menu:#0d1b2a;
+    --color-fundo-texto: #e9ecef;
+    --color-borda-h2:#333533;
+    --color-footer:#0b090a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../img/background.jpg');
+    background-attachment: fixed;
+}
+
+h2{
+    font-size: 25px;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px 0px rgba(102, 102, 102, 0.75);
+}
+/*Fim configurações padrão*/
+
+/*---------------------------------*/
+
+/*Configurações header*/
+.header{
+    background-color: var(--color-header);
+}
+
+.header .logo{
+    text-align: center;
+}
+
+.header .menu nav ul{
+    margin-left: 3%;
+    list-style: none;
+}
+
+.header .menu nav ul li{
+    display: inline-block;
+    padding: 5px 12px;
+    color: var(--color-menu);
+}
+
+.header .menu nav ul li a,
+.header #menuMobile nav ul li a{
+    text-decoration: none;
+    color: var(--color-menu);
+    font-weight: 500;
+}
+
+.header .menu nav ul li a:hover,
+.header #menuMobile nav ul li:hover{
+    text-decoration: underline;
+}
+
+.menu-hamburger{ 
+    padding: 5px 5px 15px 45px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-hamburger > i{
+    font-size: 30px;
+}
+
+.header #menuMobile{
+    display: none;
+    background-color: var(--color-header);
+    opacity: 0.8;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+}
+
+.header #menuMobile nav ul li{
+    padding-bottom: 10px;
+}
+/*Fim configurações header*/
+
+/*---------------------------------*/
+
+/*Configurações main*/
+.main h2{
+    border-bottom: 3px solid var(--color-borda-h2);
+    max-width: max-content;
+    margin-bottom: 20px;
+}
+
+/*Div Banner*/
+.main .banner{
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: 100% 20%;
+    height: 90vh;
+}
+/*Fim Div Banner*/
+
+/*---------------------------------*/
+
+/*box-texto*/
+.box-texto{
+    padding: 30px 10px;
+    margin-bottom: 30px;
+}
+
+#estrutura > .box-texto{
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+/*Fim box-texto*/
+
+/*---------------------------------*/
+
+/*Imagem do texto história skate*/
+.box-texto > figure{
+    width: 100%;
+    max-width: 302px;
+    margin: 25px auto;
+    border: 1px solid #797979;
+}
+
+.box-texto > figure > img{
+    width: 100%;
+}
+/*Fim imagem do texto história skate
+
+/*---------------------------------*/
+
+/*box e peças, aqui fica a parte de descrição das peças skate*/
+.box .pecas{
+    display: flex;
+    padding: 20px 10px;
+    margin-bottom: 80px;
+}
+
+.box h3{
+    padding: 10px;
+    margin: 0 10px;
+    background: linear-gradient(90deg,#fefae0 0%, #ffffff 80%);
+}
+
+.box .pecas figure{
+    width: 40%;
+    height: 100%;
+    background-color: var(--color-fundo-texto);
+    text-align: center;
+    border: 1px solid var(--color-fundo-texto);
+    box-shadow: -1px 2px 9px 0px rgba(173,181,189,0.75);
+}
+
+.box .pecas img{
+    width: 100%;
+}
+
+.box .pecas p{
+    width: 60%;
+    text-align: justify;
+    padding: 15px 10px;
+    line-height: 40px;
+}
+/*Fim box e peças*/
+
+/*---------------------------------*/
+
+/*Modalidades*/
+#modalidades{
+    padding-bottom: 50px;   
+}
+
+#modalidades > h2{
+    margin-left: 20px;   
+}
+
+.modalidade{
+    margin: 35px 5px;
+    padding: 20px 10px;
+}
+
+.modalidade h3{
+    text-align: center;
+}
+
+.modalidade p{
+    text-align: justify;
+    margin: auto;
+    max-width: 500px;
+}
+
+.modalidade figure{
+    width: 50%;
+    min-width: 290px;
+    margin: 10px auto;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    border: 1px solid var(--color-fundo-texto);
+    box-shadow: -1px 2px 9px 0px rgba(173,181,189,0.75);
+}
+
+.modalidade img{
+    width: 100%;
+    height: 100%;
+}
+/*Fim Modalidades*/
+
+/*---------------------------------*/
+
+/*Fim configurações main*/
+
+/*---------------------------------*/
+
+/*Footer*/
+    .footer{
+        background-color: var(--color-footer);
+        line-height: 80px;
+        margin-top: 150px;
+        text-align: center;
+        color: var(--color-fundo-texto);
+    }
+/*Fim Footer*/
+
+
+
+@media screen and (max-width: 768px){
+    .header .menu{
+        display: none;
+    }
+
+    .header .menu-hamburger{
+        display: block;
+    }
+
+    .main .banner{
+        background-image: url('../img/banner-mobile.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .box .pecas{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box .pecas figure{
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-fundo-texto);
+        text-align: center;
+        border: 1px solid var(--color-fundo-texto);
+        box-shadow: -1px 2px 9px 0px rgba(173,181,189,0.75);
+    }
+    
+    .box .pecas p{
+        width: 100%;
+        text-align: justify;
+        padding: 15px 10px;
+        line-height: 40px;
+    }
+    
+}
+
+@media screen and (max-width: 375px){
+    p{
+        font-size: 0.8rem;
+    }
+
+    h2{
+        font-size: 1.4rem;
+    }
+
+    h3{
+        font-size: 1.1rem;
+    }
+
+    figcaption{
+        font-size: 0.7rem;
+    }
+
+    .box .pecas p{
+        line-height: 28px;
+    }
+}
+
